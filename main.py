@@ -14,18 +14,20 @@ for materiale in pesi:
 for n in range(nImprevisti):
     deck.append("Imprevisto")
 
+def genQualita():
+    qualita = rand.randint(0,9)
+        if qualita < 2:
+            return("Brutto")
+        elif qualita < 5:
+            return("Scarso")
+        elif qualita < 8:
+            return("Buono")
+        else:
+            return("Bello")
 while 1:
     carta = deck[rand.randint(0, len(deck)-1)]
     print(carta)
     if carta != "Imprevisto":
-        qualita = rand.randint(0,9)
-        if qualita < 2:
-            print("Brutto")
-        elif qualita < 5:
-            print("Scarso")
-        elif qualita < 8:
-            print("Buono")
-        else:
-            print("Bello")
+        print(genQualita)
     if (input()):
         exit()
