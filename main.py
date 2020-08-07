@@ -17,17 +17,17 @@ for n in range(nImprevisti):
 def genQualita():
     qualita = rand.randint(0,9)
     if qualita < 2:
-        return("Brutto")
+        return "Brutto"
     elif qualita < 5:
-        return("Scarso")
+        return "Scarso"
     elif qualita < 8:
-        return("Buono")
+        return "Buono"
     else:
-        return("Bello")
+        return "Bello"
 while 1:
     carta = deck[rand.randint(0, len(deck)-1)]
     print(carta)
     if carta != "Imprevisto":
-        print(genQualita)
+        print(genQualita())
     if (input()):
         exit()
