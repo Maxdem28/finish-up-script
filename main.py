@@ -24,10 +24,12 @@ def genQualita():
         return "Buono"
     else:
         return "Bello"
-while 1:
-    carta = deck[rand.randint(0, len(deck)-1)]
-    print(carta)
-    if carta != "Imprevisto":
-        print(genQualita())
-    if (input()):
-        exit()
+
+if __name__ == "__main__":
+    while 1:
+        carta = deck[rand.randint(0, len(deck)-1)]
+        print(carta)
+        if carta != "Imprevisto":
+            print(genQualita())
+        if (input()):
+            exit()
