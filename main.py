@@ -1,6 +1,16 @@
 import random
 rand = random.SystemRandom()
 
+def genQualita():
+    qualita = rand.randint(0,9)
+    if qualita < 2:
+        return "Brutto"
+    elif qualita < 5:
+        return "Scarso"
+    elif qualita < 8:
+        return "Buono"
+    else:
+        return "Bello"
 nImprevisti = 17
 pesi = {"Legno":20, "Metallo":26, "Olio":6, "Pezzi di animale":3,
         "Pietra":3, "Plastica":3, "Polvere alimentare":6, "Silicio":9,
@@ -14,16 +24,6 @@ for materiale in pesi:
 for n in range(nImprevisti):
     deck.append("Imprevisto")
 
-def genQualita():
-    qualita = rand.randint(0,9)
-    if qualita < 2:
-        return "Brutto"
-    elif qualita < 5:
-        return "Scarso"
-    elif qualita < 8:
-        return "Buono"
-    else:
-        return "Bello"
 
 if __name__ == "__main__":
     while 1:
